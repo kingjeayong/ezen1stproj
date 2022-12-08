@@ -38,26 +38,26 @@ public class EzenCompony implements Company {
         String yourName = input.next();
         boolean flag = true;
         for (int i = 0 ; i < arr.size(); i++) {
-            if (arr.get(i).getName().equals(yourName)) {
-                flag = false;
-                System.out.println("직급 변경 입력 : ");
-                String modiJobRank = input.next();
-                arr.get(i).setJobRank(modiJobRank);
-                System.out.println("기본급 변경 입력 : ");
-                int modiSalary = input.nextInt();
-                arr.get(i).setBasicSalary(modiSalary);
-                System.out.println("수당 변경 입력 : ");
-                int modiBounus = input.nextInt();
-                arr.get(i).setBonus(modiBounus);
-                System.out.println("수정이 정상적으로 완료되었습니다.");
-                break;
+        	 if (arr.get(i).getName().equals(yourName)) {
+                 flag = false;
+                 System.out.println("직급 변경 입력 : ");
+                 String modiJobRank = input.next();
+                 arr.get(i).setJobRank(modiJobRank);
+                 System.out.println("기본급 변경 입력 : ");
+                 int modiSalary = input.nextInt();
+                 arr.get(i).setBasicSalary(modiSalary);
+                 System.out.println("수당 변경 입력 : ");
+                 int modiBounus = input.nextInt();
+                 arr.get(i).setBonus(modiBounus);
+                 System.out.println("수정이 정상적으로 완료되었습니다.");
+                 break;
             }
         }
         if (flag) {
             System.out.println("해당 사원이 없습니다.");
-        }
-        
+        } 
     }
+    
     @Override
     public void search() {
         System.out.print("찾고자하는 사원 이름을 입력하세요 : ");
@@ -85,7 +85,7 @@ public class EzenCompony implements Company {
     }
     @Override
     public void output() {
-        System.out.println("==========모든 사원 정보 출력==========");
+        System.out.println("=================모든 사원 정보 출력=================");
         System.out.println("--------------------------------------------------");
         System.out.println("| 이름  | 직급 |   기본급   |   수당   |  세율  |   월급     |");
         System.out.println("--------------------------------------------------");
