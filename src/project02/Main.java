@@ -83,6 +83,16 @@ public class Main {
         }
     } 
     
+    // 관리자 및 사용자 검증
+  	public static void confirm(String enterID, String loginID, String enterPWD, String loginPWD, String employeeID, String employeePWD ) {
+  		if ( enterID.equals(loginID) && enterPWD.equals(loginPWD) ) {
+         	mainMenu("관리자");
+         }
+         else if ( enterID.equals(employeeID) && enterPWD.equals(employeePWD) ) {
+         	mainMenu("사용자");
+         }
+  	}
+    
     // 관리자 또는 사용자 메뉴 - 콘솔 출력 [함수 생성]
  	public static void mainMenu(String mode) {
  		System.out.println();
@@ -95,7 +105,34 @@ public class Main {
          System.out.println("5. 종료");
          System.out.print(">>>");
  	}
+ 	
+ 	// 로그인 3회 입력 오류 시 종료 타이머 설정
  	public static void timer(int mTime) {
  		try { Thread.sleep(mTime); }  catch (Exception e) {System.out.print(""); };
+ 	}
+ 	
+ // 연차휴가수당 
+  	public static void weeklyAllowance(int money, int time) {
+  		int minimumWage, workingHours;
+  		minimumWage = money;
+  		workingHours = time;
+  		System.out.println(minimumWage * workingHours);
+  	}
+  	
+  	// 초과 근로 수당, 야간 수당, 특별 수당, 휴일 수당
+  	public static void specialPay(int money, int time) {
+  		int minimumWage, workingHours;
+  		double multiple = 1.5;
+  		minimumWage = money;
+  		workingHours = time;
+  		System.out.println((int)(minimumWage * multiple) * workingHours);
+  	}
+  	
+  	// 휴일 수당 중 초과 근무 수당
+  	public static void overtimePay(int money, int time) {
+ 		int minimumWage, workingHours, multiple = 2;
+ 		minimumWage = money;
+ 		workingHours = time;
+ 		System.out.println((minimumWage * multiple) * workingHours);
  	}
 }
