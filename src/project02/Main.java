@@ -1,12 +1,11 @@
 package project02;
  
 import java.util.Scanner;
-import java.util.Vector;
 
 public class Main {
 	
     public static void main(String[] args) {
-       EzenCompony company = new EzenCompony();
+       EzenCompany company = new EzenCompany();
         Scanner input = new Scanner(System.in);
         //사원 아이디, 비밀번호 지정
         //String loginID = "ezen", loginPWD = "ezen12345"; // management ID, Password
@@ -21,12 +20,14 @@ public class Main {
             System.out.println("  │         로 그 인         │");
             System.out.println("  └────────────────────────┘");
             int i = 0;
+            String enterID = null;
+            String enterPWD= null;
             
             for (; i < 3; i++ ) {
 	            System.out.print("   아이디  : ");
-	            String enterID = input.nextLine();
+	            enterID = input.nextLine();
 	            System.out.print("   비밀번호 : ");
-	            String enterPWD = input.nextLine();
+	            enterPWD = input.nextLine();
             
 	            
 	            //관리자 및 사용자 아이디 및 패스워드 확인
@@ -61,14 +62,28 @@ public class Main {
             int select = input.nextInt();
             switch (select) {
             case 1: // 등록
-                company.saveWorker();
-                break;
+            	   if(enterID.equals(loginID)) {
+            		   company.saveWorker();
+                  }else {
+                	  	System.out.println("\n등록 권한이 없습니다.\n");
+                  }
+                   break;
+
             case 2: // 출력
-                company.output();
-                break;
+            	 if(enterID.equals(loginID)) {
+                     company.output();
+                  }else {
+                     System.out.println("\n열람 권한이 없습니다.\n");
+                  }
+                   break;
+
             case 3: // 수정
-                company.modify();
-                break;
+            	 if(enterID.equals(loginID)) {
+                     company.modify();
+                  }else {
+                     System.out.println("\n수정 권한이 없습니다.\n");
+                  }
+            	 	break;
             case 4: // 검색
                 company.search();
                 break;            

@@ -7,6 +7,10 @@ public class CompanyBasics {
     private int bonus; //직원의 수당
     private double taxRate;
     private int monthSalary;
+    private String employeeNumber;
+    private String enterYear;
+    private String address;
+    private String phoneNum;
     
     public int getMonthSalary() {
         monthSalary = (int)((basicSalary + bonus)*(1.0 - taxRate)); //월급 구하는 공식
@@ -50,4 +54,35 @@ public class CompanyBasics {
     public void setBonus(int bonus) {
         this.bonus = bonus;
     }    
+    public String getEmployeeNumber() {
+    	return employeeNumber;
+    }
+	public void setEmployeeNumber (String eNumber) {
+	    this.employeeNumber = eNumber;
+	}
+
+	public String getEnterYear() {
+		return enterYear;
+	}
+
+	public void setEnterYear(String enterYear) {
+		this.enterYear = enterYear;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getPhoneNum() {
+		return phoneNum;
+	}
+
+	public void setPhoneNum(String phoneNum) {
+		this.phoneNum = phoneNum;
+	}
+	
 }
