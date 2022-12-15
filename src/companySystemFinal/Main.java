@@ -1,13 +1,14 @@
-package project02;
+package companySystemFinal;
  
 import java.util.Scanner;
- 
+
 public class Main {
     public static void main(String[] args) {
     	EzenCompany company = new EzenCompany();
+    	EzenCompanyEmployee employee = new EzenCompanyEmployee();
         Scanner input = new Scanner(System.in);
         
-        String loginID = null, loginPWD = null;   
+        String loginID = null;
         String mode = "";
 
         int i= 0;
@@ -15,7 +16,7 @@ public class Main {
 	        if(loginID==null) { //아직 로그인하기 전 상황이면 
 	           System.out.println("=== EZEN COMPANY 사원 관리 프로그램 ===");
 	           System.out.println("  ┌────────────────────────┐");
-	           System.out.println("  │         로 그 인         │");
+	           System.out.println("            로 그 인          ");
 	           System.out.println("  └────────────────────────┘");
 	           String enterID = "";
 	           String enterPWD = "";
@@ -61,14 +62,14 @@ public class Main {
         }
 	        
         while(true) {
-            System.out.println(" ======== " + mode + "님 환영합니다! ========");
-            System.out.println("  [ 이젠컴퍼니 사원관리 프로그램을 시작합니다 ]");
-            System.out.println("1. 등록");
-            System.out.println("2. 전체 사원정보 출력");
-            System.out.println("3. 수정");
-            System.out.println("4. 검색");
-            System.out.println("5. 삭제");
-            System.out.println("6. 종료");
+            System.out.println("  ========= " + mode + "님 환영합니다! ========");
+            System.out.println("  [ 이젠컴퍼니 사원관리 프로그램을 시작합니다 ] ");
+            System.out.println("     1. 등록");
+            System.out.println("     2. 전체 사원정보 출력");
+            System.out.println("     3. 수정");
+            System.out.println("     4. 검색");
+            System.out.println("     5. 삭제");
+            System.out.println("     6. 종료");
             System.out.print(">>>");
             int select = input.nextInt();
             switch (select) {
@@ -76,8 +77,8 @@ public class Main {
             	if(mode.equals("관리자")) {
             		company.saveWorker();
             		System.out.println();
-            	} else if(!mode.equals("관리자")){
-            		company.saveWorker2();
+            	} else if(!mode.equals("관리자")){ //사용자이면
+            		employee.saveWorker();
             		System.out.println();
             	}
                 continue;
@@ -127,7 +128,7 @@ public class Main {
             		System.out.println("1. 사원 정보 | 2. 연차 조회 | 3. 수당 조회 | 4.퇴직금 및 연봉인상율 조회");
             		String selectNum = input.next();
             		if(selectNum.equals("1")) {
-            			company.search2();
+            			employee.search();
             			System.out.println();
             		} else if(selectNum.equals("2")) {
             			company.annualLeave();
@@ -158,12 +159,23 @@ public class Main {
             	}
                 continue;
             case 6:
+                System.out.print("."); company.timer(800);
+                System.out.print("."); company.timer(800);
+                System.out.print("."); company.timer(800);
+                System.out.print("."); company.timer(800);
+                System.out.println();
+                System.out.println("    3초 후 자동으로 종료됩니다.");
+                company.timer(800); company.timer(800); company.timer(800); 
+
+                System.out.println("\n\n 〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓");
+                System.out.println("\n    시스템을 종료합니다.");
                 System.exit(0);
             default:
                 System.out.println("잘못된 입력");
                 continue;
-            }
+            } 
+            
         }
-    
+        
     }
 }

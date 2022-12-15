@@ -1,4 +1,4 @@
-package project02;
+package companySystemFinal;
  
 public class CompanyBasics {
     private String name; //직원의 이름
@@ -9,8 +9,8 @@ public class CompanyBasics {
     private int monthSalary; //월급
     private String enterYear; //입사년도 
     private String address; //주소 
-    private String phoneNum;
-    private String employeeNumber;
+    private String phoneNum; //전화번호 
+    private String employeeNumber; //사원번호 
     
 
 	public String getEmployeeNumber() {
