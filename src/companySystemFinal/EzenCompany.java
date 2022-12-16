@@ -49,6 +49,7 @@ public class EzenCompany implements Company {
                  flag = false;
                  System.out.print("-변경 사원 번호 : ");
                  employeeNumber = input.next();
+                 arr.get(i).setEmployeeNumber(employeeNumber);
                  System.out.print("-변경 직급 : ");
                  String modiJobRank = input.next();
                  arr.get(i).setJobRank(modiJobRank);

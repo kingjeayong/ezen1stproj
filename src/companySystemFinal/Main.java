@@ -28,11 +28,11 @@ public class Main {
 	           enterPWD = input.nextLine();
 	           System.out.println();
 	           
-	           if ( enterID.equals("1") && enterPWD.equals("1") ) {
+	           if ( enterID.equals("ezen") && enterPWD.equals("ezen1234") ) {
 	        	   mode = "관리자";
 	        	   loginID = enterID;
 	        	   break;
-	           } else if ( !enterID.equals("1") && !enterPWD.equals("1") ) {
+	           } else if ( !enterID.equals("ezen") && !enterPWD.equals("ezen1234") ) {
 	        	   mode = enterID;
 	        	   loginID = enterID;
 	        	   break;
