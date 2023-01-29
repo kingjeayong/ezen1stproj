@@ -1,4 +1,16 @@
-# ezen1stproj
+# **Project - Employee Management Program**  👥
+
+ ## 💡 `Java` PROJECT <img src="https://img.shields.io/badge/windows-skyblue"> <img src="https://img.shields.io/badge/eclipse-purple"> <img src="https://img.shields.io/badge/Java-17-pink"> 
+---
+
+### 🧾 프로젝트 소개 
+
+---
+
+>**ECLIPSE 환경 구축**
+
+> 1. ECLIPSE 설치
+> 2. JDK 설치
 
 ### [ ver_0.1 ]
 
@@ -130,3 +142,95 @@
    ```
 + 관리자 및 사용자 파일 분리
 + 관리자 및 사용자 분리에 따른 버그 수정(권한 포함)
+
+---
+---
+
+- 관리자<br>
+  - 로그인<br>
+  <img src="코드분석/결과물/관리자 로그인.png" width="400" height="300">
+  - 사원등록<br>
+  <img src="코드분석/결과물/사원등록.png" width="400" height="300"> 
+  - 사원 전체 조회<br>
+  <img src="코드분석/결과물/전체사원출력.png" width="400" height="300"> 
+  - 사원정보 수정 결과<br>
+  <img src="코드분석/결과물/사원정보 수정 결과.png" width="400" height="300"> 
+  - 사원 개인정보 검색<br>
+  <img src="코드분석/결과물/관리자 - 사원 개인정보 검색.png" width="400" height="300"> 
+  - 연차조회<br>
+  <img src="코드분석/결과물/관리자 - 연차조회.png" width="400" height="300"> 
+  - 연차휴가 수당 조회<br>
+  <img src="코드분석/결과물/관리자 - 연차휴가 수당 조회.png" width="400" height="300"> 
+  - 초과근무수당 조회<br>
+  <img src="코드분석/결과물/관리자 - 초과근무수당 조회.png" width="400" height="300"> 
+  - 퇴직금 조회<br>
+  <img src="코드분석/결과물/관리자 - 퇴직금 조회.png" width="400" height="300"> 
+  <img src="코드분석/결과물/관리자 - 퇴직금 조회2.png" width="400" height="300"> 
+  - 사원 삭제<br>
+  <img src="코드분석/결과물/관리자 삭제.png" width="400" height="300"> 
+  
+
+- 사용자
+  - 사용자 전용 로그인<br>
+  <img src="코드분석/결과물/사용자 전용 로그인.png" width="400" height="300"> 
+  - 사원등록<br>
+  <img src="코드분석/결과물/사원등록.png" width="400" height="300"> 
+  - 사원 개인정보 검색<br>
+  <img src="코드분석/결과물/관리자 - 사원 개인정보 검색.png" width="400" height="300"> 
+  - 사용자 사원 전체 조회 접근 제한<br>
+  <img src="코드분석/결과물/사용자 사원조회 제한접근.png" width="400" height="300"> 
+  - 사용자 사원수정 권한 접근 제한<br>
+  <img src="코드분석/결과물/사용자 사원수정 권한 접근 제한.png" width="400" height="300"> 
+  - 사용자 사원정보 삭제 접근 제한<br>
+  <img src="코드분석/결과물/사용자 사원정보 삭제 접근제한.png" width="400" height="300"> 
+
+- 기타(공통)
+  - 종료<br>
+  <img src="코드분석/결과물/종료.png" width="400" height="300"> 
+  - 타이머 함수<br>
+  <img src="코드분석/결과물/타이머_함수_AdobeExpress.gif">
+
+#### 코멘트
+---
+><img src="코드분석/emoji/image_1.gif" width="150" height="50"><br>
+```
+연차 조회 기능을 좀 더 다양한 경우의 수에 따라 세분화해서 구현하지 못해 아쉽고, 
+프로젝트를 통해 실전에서 자바 프로그램을 직접 짜볼 수 있어서 좋은 경험이었습니다. 
+```
+
+---
+
+><img src="코드분석/emoji/image_2.gif" width="150" height="50"><br>
+```
+깃을 많이 활용하지 못해 아쉽고 데이터 베이스를 활용하지 않아 데이터의 부재로 아쉽고 
+자바코드로만 구현할수있는게 한계가 있다는점에 많은것을 배웠습니다.
+```
+
+
+---
+
+><img src="코드분석/emoji/image_3.gif" width="150" height="50"><br>
+```
+팀원들과 서로 돕고 의견을 조율하며 많은 의지를 하게되었고 팀프로젝트를 할 때 
+우선순위가 어떤것인지에 대해 알게되었으며, 기능구현에선 각 코드의 취합과정의 
+어려움과 부족한 실력에 아쉬움이 남았다. 
+```
+
+><img src="코드분석/emoji/image_4.gif" width="150" height="50"><br>
+```
+팀워크를 통해 개발의 협업과정을 경험하면서 서로의 강점을 살려 맡은 바 프로젝트를 성실히 임하며 
+각자의 부족한 부분을 채워주며 많은 것을 배울 수 있는 계기가 되었습니다.
+서로 논의하고 새로운 것을 추가하며 수정해가는 과정에서 새로운 기능 구현 및 논리적 사고를 키울 수 있었지만, 
+생각하는 것만큼 쉽게 이루어지지 않아 모든 것을 할 수 없었던 점, 개발이라는 것이 쉽지 않다는 것을 다시하여금 깨닫게 합니다.
+```
+
+
+><img src="코드분석/emoji/image_5.gif" width="150" height="50"><br>
+```
+기간이 짧아서 기능을 모두 구현하지 못한 게 아쉬웠고,  
+자바에 대한 이해도가 깊지 않아서 아직 공부를 더 해야겠다는 생각이 들었다.
+```
+
+---
+---
+---
